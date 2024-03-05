@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/tim-group/iterata.svg)](https://travis-ci.org/tim-group/iterata)
+[![CI](https://github.com/tim-group/iterata/actions/workflows/ci.yml/badge.svg)](https://github.com/tim-group/iterata/actions/workflows/ci.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.timgroup/iterata_2.11/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.timgroup/iterata_2.11)
 
 # iterata

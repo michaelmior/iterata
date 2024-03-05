@@ -1,0 +1,28 @@
+name: CI
+on:
+  push:
+    branches:
+      - '*'
+    tags:
+      - 'v*'
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        scala-version: [2.11.11, 2.12.4]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Coursier cache
+      uses: coursier/cache-action@v6
+    - uses: coursier/setup-action@v1
+      with:
+        jvm: adopt:8
+        apps: sbt scala
+    - name: Test
+      run: sbt ++${{ matrix.scala-version }} test
